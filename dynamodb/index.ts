@@ -26,7 +26,9 @@ export type TableInsertType = {
     Item: any;
 }
 
-const client = new DynamoDBClient({});
+const client = new DynamoDBClient({
+    region: "us-east-2"
+});
 
 export const list_tables = async () => {
 
